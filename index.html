@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NIL Pension | Turn a small slice of NIL into income for life</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap">
+<style>
+:root{
+  --navy:#0f2742; --navy2:#17375c; --gold:#C5A253; --orange:#e8772e; --blue:#2f6fb5; --green:#2e9e6b;
+  --bg:#f5f7fa; --card:#ffffff; --ink:#14233a; --muted:#52627a; --line:#dde3ec;
+  --head:"Barlow Condensed","Arial Narrow",Arial,sans-serif; --body:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+  color-scheme:light;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0a1626;--card:#122339;--ink:#eaf0f8;--muted:#a9b8cc;--line:#26405f;color-scheme:dark}
+}
+:root[data-theme="dark"]{--bg:#0a1626;--card:#122339;--ink:#eaf0f8;--muted:#a9b8cc;--line:#26405f;color-scheme:dark}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 64px);scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55;-webkit-text-size-adjust:100%}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--navy);z-index:30}
+h1,h2,h3{font-family:var(--head);font-weight:800;line-height:1.02;margin:0;letter-spacing:.2px;text-transform:uppercase}
+p{margin:0 0 14px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--navy);color:#fff}
+header .wrap{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:var(--head);font-weight:800;font-size:24px;letter-spacing:1px;text-transform:uppercase}
+.logo span{color:var(--gold)}
+.brand{line-height:1}
+.tag{font-family:var(--head);font-weight:600;font-size:12.5px;letter-spacing:1.4px;text-transform:uppercase;color:#c3d0e2;margin-top:3px}
+header .wrap{height:64px}
+.btn{display:inline-block;border:0;cursor:pointer;font-family:var(--head);font-weight:700;font-size:19px;letter-spacing:.8px;text-transform:uppercase;text-decoration:none;padding:13px 22px;border-radius:6px;background:var(--gold);color:#0f2742;line-height:1}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.55)}
+.nl{color:#fff;text-decoration:none;font-family:var(--head);font-weight:700;font-size:17px;letter-spacing:.8px;text-transform:uppercase}
+.btn.sm{font-size:16px;padding:10px 14px}
+.hero{background:var(--navy);color:#fff;padding:54px 0 60px;background-image:linear-gradient(160deg,var(--navy) 55%,var(--navy2))}
+.eyebrow{font-family:var(--head);font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-size:17px;margin-bottom:14px}
+.hero h1{font-size:clamp(46px,11vw,92px);margin-bottom:20px}
+.hero h1 em{font-style:normal;color:var(--gold)}
+.hero p.lead{font-size:20px;max-width:640px;color:#d6e0ee;margin-bottom:26px}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.band{background:var(--gold);color:#0f2742}
+.band .wrap{padding-top:26px;padding-bottom:26px}
+.band p{margin:0;font-family:var(--head);font-weight:800;font-size:clamp(25px,5.5vw,38px);line-height:1.08;text-transform:uppercase}
+section{padding:54px 0}
+.kicker{font-family:var(--head);font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--blue);font-size:16px;margin-bottom:8px}
+h2{font-size:clamp(34px,7vw,54px);margin-bottom:14px}
+.sub{color:var(--muted);max-width:660px;margin-bottom:28px}
+.stages{display:grid;gap:16px}
+.stage{background:var(--card);border:1px solid var(--line);border-top:8px solid var(--c);border-radius:10px;padding:22px}
+.stage .age{font-family:var(--head);font-weight:800;font-size:19px;letter-spacing:1px;text-transform:uppercase;color:var(--c)}
+.stage h3{font-size:34px;margin:6px 0 10px}
+.stage p{margin:0;color:var(--muted)}
+.s1{--c:var(--orange)}.s2{--c:var(--blue)}.s3{--c:var(--green)}
+.pair{display:grid;gap:16px;margin-top:6px}
+.panel{border-radius:10px;padding:26px;color:#fff;background:var(--navy)}
+.panel.g{background:var(--green)}
+.panel.g2{background:#237a52}
+.panel small{display:block;font-family:var(--head);font-weight:700;letter-spacing:1.5px;text-transform:uppercase;font-size:16px;opacity:.85;margin-bottom:6px}
+.panel b{display:block;font-family:var(--head);font-weight:800;font-size:clamp(38px,9vw,60px);line-height:1;text-transform:uppercase}
+.panel span{display:block;margin-top:8px;opacity:.9}
+.fine-note{font-size:14px;color:var(--muted);margin-top:14px}
+.navyblock{background:var(--navy);color:#fff}
+.navyblock h2{color:#fff}
+.qs{display:grid;gap:12px;margin-top:20px}
+.qs div{border-left:6px solid var(--gold);padding:6px 0 6px 16px;font-size:20px;font-weight:500}
+.tabs{display:flex;gap:8px;margin:6px 0 20px;flex-wrap:wrap}
+.tab{flex:1 1 200px;cursor:pointer;border:2px solid var(--navy);background:var(--navy);color:#fff;font-family:var(--head);font-weight:800;font-size:21px;letter-spacing:.8px;text-transform:uppercase;padding:14px 12px;border-radius:8px}
+.tab[aria-selected="true"]{background:var(--gold);color:#0f2742;border-color:var(--gold)}
+.path{display:none;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px}
+.path.on{display:block}
+.path ul{margin:0 0 4px;padding:0;list-style:none}
+.path li{position:relative;padding:0 0 12px 30px}
+.path li::before{content:"";position:absolute;left:0;top:7px;width:14px;height:14px;border-radius:3px;background:var(--gold)}
+.path h3{font-size:30px;margin-bottom:12px}
+form{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:24px;display:grid;gap:14px;max-width:620px}
+label{font-weight:600;font-size:15px;display:block;margin-bottom:5px}
+input[type=text],input[type=email],input[type=tel],select{width:100%;font:inherit;font-size:17px;padding:13px 12px;border-radius:7px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+input:focus,select:focus{outline:3px solid var(--gold);outline-offset:1px}
+.check{display:flex;gap:10px;align-items:flex-start;font-size:16px}
+.check input{width:22px;height:22px;margin-top:2px;accent-color:var(--navy)}
+.row2{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+footer details{margin-bottom:12px}footer summary{cursor:pointer;color:#c3d0e2;font-weight:600;font-size:14px}footer details p{margin-top:8px}
+#thanks{display:none;border-left:6px solid var(--green);padding:10px 0 10px 16px;font-weight:600}
+.signer{display:flex;gap:16px;align-items:stretch;margin-top:8px}
+.signer .bar{width:6px;background:var(--gold);border-radius:3px}
+.signer b{font-family:var(--head);font-size:26px;text-transform:uppercase;letter-spacing:.5px;display:block}
+.signer span{color:#c3d0e2;font-size:16px;line-height:1.5}
+footer{background:var(--navy);color:#9fb2c8;padding:34px 0 46px}
+footer p{font-size:13px;line-height:1.55;margin-bottom:10px}
+.aboutgrid{display:grid;gap:16px}
+@media (min-width:760px){
+  .aboutgrid{grid-template-columns:1fr 1fr}
+  .stages{grid-template-columns:repeat(3,1fr)}
+  .pair{grid-template-columns:repeat(3,1fr)}
+  .qs{grid-template-columns:1fr 1fr;gap:18px 30px}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <div class="brand"><div class="logo">NIL <span>Pension</span></div><div class="tag">An Integrated Planning Partners Solution</div></div>
+    <div style="display:flex;align-items:center;gap:14px"><a href="#about" class="nl">About</a><a class="btn sm" href="#get">Get the overview</a></div>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">For student-athletes and the people who advise them</div>
+    <h1>Your NIL years can<br><em>pay you for life.</em></h1>
+    <p class="lead">Set aside a small fraction of NIL income now. It’s built to pay you potential tax-free income later, long after the games are over.</p>
+    <div class="cta">
+      <a class="btn" href="#get">Get the overview PDF</a>
+      <a class="btn ghost" href="#paths">Choose your path</a>
+    </div>
+  </div>
+</div>
+
+<div class="band"><div class="wrap">
+  <p>Go pro or not, every athletic career ends someday. And most careers after sports don’t come with a pension.</p>
+</div></div>
+
+<section>
+  <div class="wrap">
+    <div class="kicker">How it works</div>
+    <h2>Fund it once. Let it work.</h2>
+    <p class="sub">The NIL Pension is built on a life insurance policy designed to build cash value and pay income later. Three stages, one simple idea.</p>
+    <div class="stages">
+      <div class="stage s1"><div class="age">In college</div><h3>Fund it</h3><p>Set aside a small portion of NIL or revenue-share income. That’s the only money you put in.</p></div>
+      <div class="stage s2"><div class="age">Through your career</div><h3>Let it grow</h3><p>Nothing more out of pocket. Your policy does the work while your career and life move forward.</p></div>
+      <div class="stage s3"><div class="age">When you need it</div><h3>Take income</h3><p>Optional income, potentially tax-free. You choose when to start, and it can last through retirement.</p></div>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="kicker">A hypothetical example</div>
+    <h2>A small slice. A big difference.</h2>
+    <div class="pair">
+      <div class="panel"><small>Set aside over two college years</small><b>$200,000</b><span>$100,000 a year at ages 19 and 20, a portion of NIL income</span></div>
+      <div class="panel g"><small>Potential tax-free income</small><b>$123,507 a year</b><span>In this example, starting at age 45</span></div>
+      <div class="panel g2"><small>Potential cumulative income</small><b>$6,916,365</b><span>Ages 45 to 100, 56 years of income</span></div>
+    </div>
+    <p style="margin-top:18px;font-weight:600">In the same example, a taxable investment account nets about $3.28 million over the same years.</p>
+    <p class="fine-note">Hypothetical illustration only. Not a guarantee. In this example income begins at 45, but it can begin sooner or later. See important information below.</p>
+  </div>
+</section>
+
+<div class="navyblock"><section>
+  <div class="wrap">
+    <h2>Questions worth asking now</h2>
+    <div class="qs">
+      <div>If your playing days ended next year, what would pay your bills at 30? At 45?</div>
+      <div>What will $200,000 look like in two years if it has no job?</div>
+      <div>If next year’s deals are half of this year’s, will you wish you had set some aside?</div>
+      <div>Who is responsible for your money plan after your eligibility runs out?</div>
+    </div>
+  </div>
+</section></div>
+
+<section id="paths">
+  <div class="wrap">
+    <div class="kicker">Choose your path</div>
+    <h2>Who is this for?</h2>
+    <div class="tabs" role="tablist">
+      <button class="tab" role="tab" aria-selected="true" data-p="ath">I’m an athlete</button>
+      <button class="tab" role="tab" aria-selected="false" data-p="adv">I advise athletes</button>
+    </div>
+    <div class="path on" id="p-ath">
+      <h3>Build something that outlasts your career</h3>
+      <ul>
+        <li>Use a fraction of your NIL income, not all of it.</li>
+        <li>It’s one more asset, built while you’re still in college. It doesn’t depend on how long your playing career lasts.</li>
+        <li>Income later in life is optional and potentially tax-free.</li>
+        <li>Talk it over with someone you trust and a tax professional first.</li>
+      </ul>
+      <p><a class="btn" href="#get">Get the athlete overview</a></p>
+    </div>
+    <div class="path" id="p-adv">
+      <h3>For parents, agents and financial advisors</h3>
+      <ul>
+        <li>A clear way to help an athlete turn a few strong earning years into long-term retirement income.</li>
+        <li>Uses only a small portion of NIL or revenue-share income.</li>
+        <li>Fits athletes who may not have a pension elsewhere in their professional life.</li>
+        <li>Easy to explain: fund early, nothing more out of pocket, optional income later.</li>
+      </ul>
+      <p><a class="btn" href="#get">Get the advisor overview</a></p>
+    </div>
+  </div>
+</section>
+
+<div class="navyblock" id="get"><section>
+  <div class="wrap">
+    <div class="eyebrow">Next step</div>
+    <h2>Get the overview. Or talk it through.</h2>
+    <p style="color:#d6e0ee;max-width:620px;margin-bottom:24px">Tell us where to send the PDF. Want to talk it through? Check the box and we’ll reach out to schedule a call.</p>
+    <form id="lead" novalidate style="color:var(--ink)">
+      <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0">
+      <div class="row2">
+        <div><label for="fn">First name</label><input id="fn" type="text" autocomplete="given-name" required></div>
+        <div><label for="ln">Last name</label><input id="ln" type="text" autocomplete="family-name" required></div>
+      </div>
+      <div><label for="e">Email</label><input id="e" type="email" autocomplete="email" required></div>
+      <div><label for="r">I am a</label>
+        <select id="r"><option value="athlete">Student-athlete</option><option value="parent">Parent</option><option value="agent">Agent</option><option value="advisor">Financial advisor</option><option value="other">Other</option></select></div>
+      <div><label for="ph">Phone (needed only if you want a call)</label><input id="ph" type="tel" autocomplete="tel"></div>
+      <label class="check" for="call" style="font-weight:500"><input id="call" type="checkbox"> <span>I’d also like to schedule a call</span></label>
+      <label class="check" for="consent" style="font-weight:400;font-size:14px;line-height:1.45"><input id="consent" type="checkbox"> <span id="consentText">I agree that Integrated Planning Partners may contact me about NIL Pension by email, and by phone or text at the number above if I provide one. I understand this is not required to buy anything. See the <a href="#privacy" id="privLink">privacy notice</a>.</span></label>
+      <button class="btn" type="submit" style="color:#0f2742">Send me the overview</button>
+      <div id="thanks" role="status"></div>
+    </form>
+    <div class="signer" style="margin-top:34px">
+      <div class="bar"></div>
+      <div><b>Jeff Faine, CLU</b><span>Founder, Integrated Planning Partners<br>support@integratedplanningpartners.com · 773-318-9608</span></div>
+    </div>
+  </div>
+</section></div>
+
+<section id="about">
+  <div class="wrap">
+    <div class="kicker">About us</div>
+    <h2>Why I do this</h2>
+    <div class="path on" style="display:block;max-width:760px">
+      <h3>Jeff Faine, CLU</h3>
+      <p style="color:var(--muted);margin-bottom:16px">Founder, Integrated Planning Partners</p>
+      <p>I’m a Notre Dame alumnus and a former NFL offensive lineman, with stops with the Cleveland Browns, New Orleans Saints, Tampa Bay Buccaneers and Cincinnati Bengals.</p>
+      <p>On the offensive line, my job was to protect others and create opportunities for them. That’s the reason I entered financial services in the first place.</p>
+      <p>It extends to the athletes we work with. The work they do on the court and the field should pay off for them long after their playing days have ended. NIL Pension is one way we make that happen.</p>
+      <p style="margin:0">I’m also the author of <i>The Architecture of Retirement</i> and co-founder of The Faine House, a nonprofit supporting young adults aging out of foster care. NIL Pension is a solution of Integrated Planning Partners, the firm I founded.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <details id="privacy"><summary>Privacy notice</summary>
+      <p>We collect your name, email, role, phone number (if you give one) and whether you asked for a call. We use it to send you the NIL Pension overview, to follow up, and to schedule a call if you asked for one. Your information is stored with the service providers we use to run this site and send email, and is seen by the Integrated Planning Partners team. We do not sell it. You can unsubscribe from any email, or ask us to delete your information, at support@integratedplanningpartners.com. This site is for adults 18 and older, including parents and guardians of student-athletes.</p></details>
+    <p><b>Important information.</b> The NIL Pension is built on a life insurance policy designed to build cash value and provide income. Examples shown are hypothetical and are not a guarantee of future results. Not all is guaranteed. Illustrated income compares policy income at an assumed gross 6.84% rate to a taxable account at a net 6.84% rate with a 15% capital gains tax assumed on distributions, a simplified assumption; actual results will vary. Income is taken through policy loans and withdrawals, which reduce the cash value and death benefit and can cause the policy to lapse if not managed. Tax treatment depends on current tax law, which can change. Life insurance requires underwriting and has fees and charges. This page is educational, is not tax, legal or investment advice, and is not an offer or solicitation in any jurisdiction where it would be unlawful. Talk with a tax professional before deciding.</p>
+    <p>&copy; 2026 Integrated Planning Partners. NIL Pension is a solution of Integrated Planning Partners.</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var tabs=document.querySelectorAll('.tab');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false')});
+      document.getElementById('p-ath').classList.toggle('on',t.dataset.p==='ath');
+      document.getElementById('p-adv').classList.toggle('on',t.dataset.p==='adv');
+    });
+  });
+  document.getElementById('privLink').addEventListener('click',function(){document.getElementById('privacy').open=true;});
+  var FORM_ENDPOINT='https://xkcfalliiznlmdxrssyf.supabase.co/functions/v1/submit-lead';
+  var form=document.getElementById('lead'),thanks=document.getElementById('thanks'),btn=form.querySelector('button');
+  function say(m,ok){thanks.style.display='block';thanks.style.borderLeftColor=ok?'#2e9e6b':'#e8772e';thanks.textContent=m;}
+  form.addEventListener('submit',function(ev){
+    ev.preventDefault();
+    var fn=document.getElementById('fn').value.trim(),ln=document.getElementById('ln').value.trim(),e=document.getElementById('e').value.trim(),
+        ph=document.getElementById('ph').value.trim(),call=document.getElementById('call').checked,consent=document.getElementById('consent').checked;
+    if(!fn||!ln||!/^\S+@\S+\.\S+$/.test(e)){say('Please add your first and last name and a valid email.',false);return;}
+    if(call&&ph.replace(/\D/g,'').length<10){say('Please add a phone number so we can call you.',false);return;}
+    if(!consent){say('Please check the consent box so we can send your overview.',false);return;}
+    if(!FORM_ENDPOINT){say('Preview only: this form is not connected yet, so nothing was sent.',false);return;}
+    var body={firstName:fn,lastName:ln,email:e,role:document.getElementById('r').value,phone:ph,wantsCall:call,consent:true,
+      consentText:document.getElementById('consentText').textContent.trim(),website:document.getElementById('website').value};
+    btn.disabled=true;
+    fetch(FORM_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)})
+      .then(function(r){return r.json().then(function(j){return {ok:r.ok,j:j};});})
+      .then(function(x){
+        if(!x.ok||!x.j.ok){say((x.j&&x.j.error)||'Something went wrong. Please email support@integratedplanningpartners.com.',false);btn.disabled=false;return;}
+        say('Thank you. Your overview is on its way to '+e+'. If you don’t see it in a few minutes, check your spam folder.',true);form.reset();btn.disabled=false;
+      })
+      .catch(function(){say('Something went wrong. Please email support@integratedplanningpartners.com.',false);btn.disabled=false;});
+  });
+})();
+</script>
+</body>
+</html>
