@@ -90,6 +90,11 @@ footer details{margin-bottom:12px}footer summary{cursor:pointer;color:#c3d0e2;fo
 .signer span{color:#c3d0e2;font-size:16px;line-height:1.5}
 footer{background:var(--navy);color:#9fb2c8;padding:34px 0 46px}
 footer p{font-size:13px;line-height:1.55;margin-bottom:10px}
+@media (max-width:520px){.nl{display:none}.tag{font-size:10.5px;letter-spacing:1px;line-height:1.15}.logo{font-size:22px}.btn.sm{font-size:14px;padding:9px 11px}}
+.aboutgrid2{display:grid;gap:22px;align-items:start}
+.portrait{margin:0;border-radius:10px;overflow:hidden;border-bottom:6px solid var(--gold);background:var(--navy)}
+.portrait img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 18%}
+@media (min-width:760px){.aboutgrid2{grid-template-columns:340px 1fr;gap:34px}}
 .aboutgrid{display:grid;gap:16px}
 @media (min-width:760px){
   .aboutgrid{grid-template-columns:1fr 1fr}
@@ -225,14 +230,16 @@ footer p{font-size:13px;line-height:1.55;margin-bottom:10px}
   <div class="wrap">
     <div class="kicker">About us</div>
     <h2>Why I do this</h2>
-    <div class="path on" style="display:block;max-width:760px">
+    <div class="aboutgrid2">
+      <figure class="portrait"><img src="jeff-faine.jpg" alt="Jeff Faine, founder of Integrated Planning Partners" loading="lazy" width="900" height="1154"></figure>
+      <div class="path on" style="display:block">
       <h3>Jeff Faine, CLU</h3>
       <p style="color:var(--muted);margin-bottom:16px">Founder, Integrated Planning Partners</p>
       <p>I’m a Notre Dame alumnus and a former NFL offensive lineman, with stops with the Cleveland Browns, New Orleans Saints, Tampa Bay Buccaneers and Cincinnati Bengals.</p>
       <p>On the offensive line, my job was to protect others and create opportunities for them. That’s the reason I entered financial services in the first place.</p>
       <p>It extends to the athletes we work with. The work they do on the court and the field should pay off for them long after their playing days have ended. NIL Pension is one way we make that happen.</p>
       <p style="margin:0">I’m also the author of <i>The Architecture of Retirement</i> and co-founder of The Faine House, a nonprofit supporting young adults aging out of foster care. NIL Pension is a solution of Integrated Planning Partners, the firm I founded.</p>
-    </div>
+    </div></div>
   </div>
 </section>
 
